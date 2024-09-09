@@ -22,7 +22,7 @@ from langchain.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 
 # 기존 코드 유지
-llm = RemoteRunnable("https://viable-walrus-deadly.ngrok-free.app/llm/")
+llm = RemoteRunnable("https://glad-shrimp-regular.ngrok-free.app/llm/")
 
 # FAISS 벡터 저장소 생성 함수 (PDF 파일 처리)
 def create_vector_store(pdf_path):
