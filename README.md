@@ -1,2 +1,22 @@
-# Research-on-implementing-customized-local-LLM-based-on-speech-recognition
-Research on implementing customized local LLM based on speech recognition code
+# 음성인식 기반의 맞춤형 로컬 챗봇 시스템 구현에 관한 연구
+
+## 프로젝트 요약
+본 프로젝트는 기업 정보 보안 및 API 비용 문제를 해결하기 위해 **Llama3**와 같은 오픈소스 LLM(Large Language Model)을 활용하여 음성으로 동작하는 **맞춤형 로컬 챗봇 시스템**을 구현한 연구입니다. 로컬 환경에서 구동 가능하며, 특정 도메인에 특화된 기능을 제공합니다.
+
+## 주요 기술 스택 및 구현 내용
+
+### 핵심 기술
+* **LLM (Large Language Model):** Meta의 오픈소스 모델 **Llama3**
+* **파인 튜닝 접근법:** **PEFT** (Parameter Efficient Fine-Tuning)와 **RAG** (Retrieval Augmented Generation)를 결합한 **하이브리드(Hybrid) 접근법**을 통해 도메인 특화 학습 수행.
+* **서버 환경:** **Ollama**를 활용한 로컬 LLM 구동 및 **LangServe**, **Ngrok**을 통한 배포.
+* **클라이언트 환경:** **Raspberry Pi 5**를 사용하여 모바일 환경 동작 구현 및 **음성인식/합성 기능** 연동.
+
+### 성능 평가
+RAG, PEFT, 하이브리드 방식 간의 정확도 비교 평가를 진행했습니다.
+| 평가 방식 | 정확도 |
+| :---: | :---: |
+| RAG 단독 | 23.3% |
+| PEFT 단독 | 30.8% |
+| **하이브리드 (PEFT + RAG)** | **45.1%** (최고 성능) |
+
+---
